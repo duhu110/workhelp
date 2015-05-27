@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入提醒内容"
+        android:maxLength="40"
+        android:textColorHint="#DDDDDD"
+        android:layout_marginTop="20dp"
+         />
+    
+       <EditText  android:id="@+id/calendar_create_date_edit_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="请选择开始日期"
+        android:maxLength="40"
+        android:textColorHint="#DDDDDD"
+        android:layout_marginTop="20dp"
+         />
+
+    <EditText  android:id="@+id/calendar_create_time_edit_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="请选择开始时间"
+        android:maxLength="40"
+        android:textColorHint="#DDDDDD"
+        android:layout_marginTop="20dp"
+         />
+    <Button  android:id="@+id/calendar_create_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="创建"
+        android:maxLength="40"
+        android:textColorHint="#DDDDDD"
+        android:layout_marginTop="20dp"/>
+    
+    
+   
+</LinearLayout>

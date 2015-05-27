@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="custom_header_text">#85B100</color>
+    <color name="custom_selected">#A8D324</color>
+    <color name="custom_background">#F0F8DB</color>
+    <color name="custom_background_today">#FF9105</color>
+    <color name="custom_background_disabled">#F0F8DB</color>
+    <color name="custom_text_selected">#FFFFFFFF</color>
+    <color name="custom_text_inactive">#7f778088</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="share_content_bg">#CCC</color>
+
+    
+    
+    <color name="background">#f4dfc0</color>
+    
+    <color name="background_item">#f9f8f1</color>
+    
+    
+    
+    <color name="contact_list_line">#cddae9</color>
+    
+    <color name="blue">#5dc2f1</color>
+    <color name="blue_pressed">#1892cb</color>
+    <color name="shadow_black">#B4000000</color>
+    
+    <color name="bg_dialog">#B44f7aaa</color>
+    <color name="padding_dialog">#B4c5cee6</color>
+
+</resources>

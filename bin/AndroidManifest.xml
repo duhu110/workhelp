@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chinatelecom.ctsi.workhelper"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 检查网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 访问网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 获取手机状态 umeng -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 获取手机wifi umeng -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取手机日志 umeng -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 使用升级功能 umeng -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 拨打电话  android.permission.CALL_PHONE -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 发送短信 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <!-- 接收短信权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <!-- note3 -->
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USER_FULL" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+
+    <!-- for android badge -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+
+    <!-- for Samsung badge -->
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+
+    <!-- for htc badge -->
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+
+    <!-- for sony badge -->
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+
+    <!-- for apex badge -->
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+
+    <application
+        android:name=".WHApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.chinatelecom.ctsi.workhelper.MainActivity"
+            android:label="@string/app_name" 
+             android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.chinatelecom.ctsi.workhelper.OtherActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.chinatelecom.ctsi.workhelper.activity.AddScheduleActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.chinatelecom.ctsi.workhelper.pushutil.PushStatusActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.chinatelecom.ctsi.workhelper.activity.ShareReplyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.chinatelecom.ctsi.workhelper.activity.MePersonInfo" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.chinatelecom.ctsi.workhelper.activity.MeAbout" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.chinatelecom.ctsi.workhelper.activity.MeHuoyue"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- push必须的receviver和service声明 -->
+        <receiver android:name=".pushutil.PushServiceReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.chinatelecom.enterprisecontact_qx.ScheduleTask" />
+
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Mqtt Service -->
+        <service
+            android:name=".push.service.MqttService"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:windowSoftInputMode="stateHidden" 
+             android:screenOrientation="portrait">
+           
+        </activity>
+        <activity
+            android:name=".service.Activity_Alert"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.SplashActivity" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.AlarmService"
+            android:enabled="true" >
+        </service>
+
+        <activity android:name=".ztest.Activty_Test"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>

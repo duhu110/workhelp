@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" 
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:background="@color/background_item"
+    >
+
+    <ImageView
+        android:id="@+id/share_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        
+         >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/share_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                 android:textColor="@color/blue"
+                android:text="{user}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="给" />
+
+            <TextView
+                android:id="@+id/share_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全体"
+                android:textColor="@color/blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享了一个任务" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/share_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请大家对5月份合同金额进行汇总" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/share_content_bg"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/share_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请大家对5月份合同金额进行汇总" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/share_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="5-18 18:00" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                 >
+
+                <Button
+                    android:id="@+id/share_like_btn"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:background="@drawable/btn_share_like" />
+
+                <TextView
+                    android:id="@+id/share_like_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="5" 
+                    android:layout_marginRight="10dp"
+                     android:layout_marginLeft="5dp"
+                    />
+
+                <Button
+                    android:id="@+id/share_show_reply_btn"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:background="@drawable/btn_share_comment" />
+            </LinearLayout>
+        </RelativeLayout>
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/share_comments"
+            android:orientation="vertical"
+            ></LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+         <item  
+        android:id="@+id/action_plus"  
+        android:icon="@drawable/g_menu_createoradd"  
+        android:showAsAction="always"
+        android:title="@string/action_plus"/>  
+</menu> 
+

@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <!-- 4。0以上写法 -->
+    <item
+        android:id="@+id/menu_item_myProvider"
+        android:actionProviderClass="com.chinatelecom.ctsi.workhelper.fragment.MyActionProvider"
+        android:icon="@drawable/g_menu_filetransfer_history"
+        android:showAsAction="always"
+        android:title=""/>
+
+</menu>

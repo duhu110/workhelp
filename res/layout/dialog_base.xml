@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_base_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="10dip"
+    android:orientation="vertical" >
+
+    <!-- Title Layout -->
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip" >
+
+        <ImageView
+            android:id="@+id/img_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize_large" />
+    </LinearLayout>
+
+    <!-- Body Layout -->
+
+    <LinearLayout
+        android:id="@+id/layout_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dip" >
+    </LinearLayout>
+
+    <!-- Button Layout -->
+
+    <LinearLayout
+        android:id="@+id/layout_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dip" >
+
+        <TextView
+            android:id="@+id/txv_btn_left"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dialog_btn"
+            android:gravity="center"
+            android:textColor="#ffad26"
+            android:textSize="@dimen/textsize_normal" />
+
+        <TextView
+            android:id="@+id/txv_btn_mid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dialog_btn"
+            android:gravity="center"
+            android:textColor="#5ec4f3"
+            android:textSize="@dimen/textsize_normal" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/txv_btn_right"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dialog_btn"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize_normal" />
+    </LinearLayout>
+
+</LinearLayout>

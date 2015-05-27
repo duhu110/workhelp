@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/share_reply_et"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="bottom"
+        android:hint="请输入回复内容"
+        android:maxLength="40"
+        android:minHeight="50dp"
+        android:textColorHint="#DDDDDD" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/share_reply_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/share_reply_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="回复给所有人" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/share_reply_commit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:maxLength="40"
+        android:text="回复"
+        android:textColorHint="#DDDDDD" />
+
+</LinearLayout>

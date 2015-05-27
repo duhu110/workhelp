@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_mainview"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_upper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/txv_title"
+            style="@style/shadow_black"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize_normal"
+            android:textStyle="bold" >
+        </TextView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/layout_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/layout_views"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:minHeight="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txv_btn1"
+                style="@style/shadow_black"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/icon_dialog_btn"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textsize_small" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txv_btn2"
+                style="@style/shadow_black"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/icon_dialog_btn"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textsize_small" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txv_btn3"
+                style="@style/shadow_black"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/icon_dialog_btn"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textsize_small" >
+            </TextView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">外勤助手</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="tab_name_message">消息</string>
+    <string name="tab_name_calendar">日程</string>
+    <string name="tab_name_work">工作圈</string>
+    <string name="tab_name_me">我</string>
+    <string name="action_plus">创建</string>
+
+     <!-- Strings that need formatting -->
+    <string name="messageRecieved">Received message %1$s &lt;br/> &lt;small>Topic: %2$s &lt;/small> </string>
+    <string name="timestamp">&lt;br/> &lt;small> %1$s &lt;/small></string>
+    <string name="notification">%1$s has received %2$s on topic %3$s</string>
+    <string name="toast_pub_success">Published message: %1$s to topic: %2$s</string>
+    <string name="toast_sub_success">Subscribed to %1$s</string>
+    <string name="toast_disconnected">Disconnected</string>
+    <string name="toast_pub_failed">Failed to publish message: %1$s to topic: %2$s</string>
+    <string name="toast_sub_failed">Failed to subscribe to %1$s</string>
+    <string name="connection_lost">%1$s has lost connection to %2$s</string>
+    <string name="failure_disconnect">Disconnect failed.&lt;br/> &lt;small>Reason: %s&lt;/small> </string>
+    <string name="failure_connect">Client failed to connect.&lt;br/> &lt;small>Reason: %s&lt;/small></string>
+    <string name="client_connected">Client connected successfully</string>
+
+    <string name="tips_uncatch_server_exception">服务器繁忙,请稍后再试</string>
+    <string name="tips_unavaliable_network">请检查您的网络</string>
+    <string name="tips_timeout_network">服务器响应超时</string>
+    
+    
+    
+    <string name="app_id">54810eba</string>
+</resources>
